@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Squart:Base xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:Squart="www.Squart.com">
+	<Squarts Color="White" Cle="2" Lenght="3.5" />
+	<Squarts Color="Black" Cle="6" Lenght="5.0" />
+	<Squarts Color="Red" Cle="11" Lenght="6.5" />
+	<Relations Target="//@Squarts.1" Source="//@Squarts.0" />
+	<Relations Target="//@Squarts.0" Source="//@Squarts.1" />
+</Squart:Base>

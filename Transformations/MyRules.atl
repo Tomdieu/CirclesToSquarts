@@ -1,0 +1,40 @@
+-- @path MM=/CirclesToSquarts/Metamodels/Circle_metamodel.ecore
+-- @path MM1=/CirclesToSquarts/Metamodels/Squart_metamodel.ecore
+
+module MyRules;
+create OUT : MM1 from IN : MM;
+
+------ ----- Rules -----------
+rule Archi2Base {
+	from
+		Arch : MM!Architecture
+	to 
+		Bas : MM1!Base (
+			Relations <- Arch.Relation,
+			Squarts <- Arch.Circles
+		)
+}
+
+
+rule themaintransformation {
+	from
+		C : MM!Circle
+	to 
+		S : MM1!Squart (
+			Cle <- C.Cle,
+			Color <- C.Color,
+			Lenght <- C.Rayon
+		)
+}
+
+rule Relation2relation {
+	from
+		RC : MM!Relation
+	to 
+		RS : MM1!Relation (
+			Source <- RC.Source,
+			Target <- RC.Target
+		)
+}
+
+------ -----End Rules -----------

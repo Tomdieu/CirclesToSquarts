@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Circle:Architecture
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Circle="www.Circle.com"
+    xsi:schemaLocation="www.Circle.com ../Metamodels/Circle_metamodel.ecore">
+  <Circles Color="White"
+      Cle="2"
+      Rayon="3.5"/>
+  <Circles Color="Black"
+      Cle="6"
+      Rayon="5.0"/>
+  <Circles Color="Red"
+      Cle="11"
+      Rayon="6.5"/>
+  <Relation
+      Target="//@Circles.1"
+      Source="//@Circles.0"/>
+  <Relation
+      Target="//@Circles.0"
+      Source="//@Circles.1"/>
+</Circle:Architecture>
